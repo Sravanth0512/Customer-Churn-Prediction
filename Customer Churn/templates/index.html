@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Churn Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Customer Churn Prediction</h1>
+        <form action="/predict" method="post">
+            <label for="Tenure">Tenure:</label>
+            <input type="number" step="any" name="Tenure" required>
+            
+            <label for="PreferredLoginDevice">Preferred Login Device:</label>
+            <select name="PreferredLoginDevice" required>
+                <option value="0">Computer</option>
+                <option value="1">Mobile Phone</option>
+            </select>
+
+            <label for="CityTier">City Tier:</label>
+            <input type="number" name="CityTier" required>
+            
+            <label for="WarehouseToHome">Warehouse to Home:</label>
+            <input type="number" step="any" name="WarehouseToHome" required>
+            
+            <label for="PreferredPaymentMode">Preferred Payment Mode:</label>
+            <select name="PreferredPaymentMode" required>
+                <option value="0">Cash on Delivery</option>
+                <option value="1">Credit Card</option>
+                <option value="2">Debit Card</option>
+                <option value="3">E wallet</option>
+                <option value="4">UPI</option>
+            </select>
+            
+            <label for="Gender">Gender:</label>
+            <select name="Gender" required>
+                <option value="0">Female</option>
+                <option value="1">Male</option>
+            </select>
+            
+            <label for="HourSpendOnApp">Hour Spend on App:</label>
+            <input type="number" step="any" name="HourSpendOnApp" required>
+            
+            <label for="NumberOfDeviceRegistered">Number of Device Registered:</label>
+            <input type="number" name="NumberOfDeviceRegistered" required>
+            
+            <label for="PreferedOrderCat">Preferred Order Category:</label>
+            <select name="PreferedOrderCat" required>
+                <option value="0">Fashion</option>
+                <option value="1">Grocery</option>
+                <option value="2">Laptop & Accessory</option>
+                <option value="3">Mobile</option>
+                <option value="4">Mobile Phone</option>
+                <option value="5">Others</option>
+            </select>
+            
+            <label for="SatisfactionScore">Satisfaction Score:</label>
+            <input type="number" name="SatisfactionScore" required>
+            
+            <label for="MaritalStatus">Marital Status:</label>
+            <select name="MaritalStatus" required>
+                <option value="0">Divorced</option>
+                <option value="1">Married</option>
+                <option value="2">Single</option>
+            </select>
+            
+            <label for="NumberOfAddress">Number of Address:</label>
+            <input type="number" name="NumberOfAddress" required>
+            
+            <label for="Complain">Complain:</label>
+            <input type="number" name="Complain" required>
+            
+            <label for="OrderAmountHikeFromlastYear">Order Amount Hike From Last Year:</label>
+            <input type="number" step="any" name="OrderAmountHikeFromlastYear" required>
+            
+            <label for="CouponUsed">Coupon Used:</label>
+            <input type="number" name="CouponUsed" required>
+            
+            <label for="OrderCount">Order Count:</label>
+            <input type="number" name="OrderCount" required>
+            
+            <label for="DaySinceLastOrder">Day Since Last Order:</label>
+            <input type="number" step="any" name="DaySinceLastOrder" required>
+            
+            <label for="CashbackAmount">Cashback Amount:</label>
+            <input type="number" step="any" name="CashbackAmount" required>
+            
+            <button type="submit">Predict Churn</button>
+        </form>
+    </div>
+</body>
+</html>
